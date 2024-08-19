@@ -34,14 +34,11 @@ developing applications that use %{name}.
 %autosetup -p1
 
 %build
-%cmake -DCMAKE_INSTALL_RPATH_USE_LINK_PATH=False
+%cmake
 %cmake_build
 
 %install
 %cmake_install
-
-# Pick up docs in the files section
-#rm -fr %{buildroot}%{_docdir}
 
 %files
 %{_bindir}/%{name}
